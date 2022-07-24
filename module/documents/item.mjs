@@ -11,7 +11,15 @@ export class PPUEItem extends Item {
     // preparation methods overridden (such as prepareBaseData()).
     super.prepareData();
   }
+  prepareDerivedData() {
+    const itemData = this;
+    const systemData = itemData.system;
+    const flags = itemData.flags.ppue || {};
 
+    // Make modifications to data here. For example:
+    systemData.totalcost = Math.max(((systemData.cost * systemData.rankmod) + Number.fromString(systemData.pro) - Number.fromString(systemData.con)),1);
+    systemData.totalrankcost = (((systemData.cost * systemData.rank) * systemData.rankmod) + Number.fromString(systemData.pro) - Number.fromString(systemData.con));
+  }
   /**
    * Prepare a data object which is passed to any Roll formulas which are created related to this Item
    * @private

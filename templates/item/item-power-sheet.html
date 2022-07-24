@@ -18,45 +18,44 @@
   </nav>
 
   {{!-- Sheet Body --}}
-  <section class="sheet-body">
-
+  <article class="sheet-body">
     {{!-- Description Tab --}}
-    <div class="tab" data-group="primary" data-tab="description">
-      {{editor system.description target="system.description" rollData=rollData button=true owner=owner editable=editable}}
-    </div>
+    <section>
+      <div class="tab" data-group="primary" data-tab="description">
+        {{editor system.description target="system.description" rollData=rollData button=true owner=owner editable=editable}}
+      </div>
+    </section>
     {{!-- Details Tab --}}
-    <div class="tab" data-group="primary" data-tab="details">
-      <section>
+    <section class="tab" data-group="primary" data-tab="details">
       <div class="flexrow">
-        <label>Base Cost: </label><input name="system.cost" type="number" value="{{system.cost}}" data-dtype="Number"/>
+        <label>Final Cost: </label> <p><i>{{system.totalrankcost}} ( ( {{system.cost}} * {{system.rank}} ) + {{system.pro}} - {{system.con}} )</i></p>
+      </div>
+      <div class="flexrow">
+        <label>Base Cost: </label><input name="system.cost" type="number" value="{{system.cost}}" data-dtype="Number" placeholder="1"/>
+      </div> 
+      <div class="flexrow">
+        <label>Ranks Bought: </label><input name="system.rank" type="number" value="{{system.rank}}" data-dtype="Number" placeholder="0"/>
+        <label>Cost per Rank: </label><input name="system.rankmod" type="number" value="{{system.rankmod}}" data-dtype="Number" placeholder="1"/>
       </div> 
       <div class="flexrow">
         <label>Adjusted Cost: </label> <p><i>{{system.totalcost}} ( ( {{system.cost}} * {{system.rankmod}} ) + {{system.pro}} - {{system.con}} )</i></p>
       </div>
-      <div class="flexrow">
-        <label>Cost Per Rank: </label> <p><i>{{system.totalcost}} ( {{system.cost}} + {{system.pro}} - {{system.con}} )</i></p>
-      </div>
-    </section>
-    <section class="procons">
-      {{!-- Subdividing for Pros/Cons section --}}      
-      <article class="pros-flex">
-        <section>
-          <label for=`{{item.id}}-pro-cost`><h2>Total Pro Cost:</h2></label>
-          <input id=`{{item.id}}-pro-cost` type="number" name="system.pro" data-dtype="number" value={{system.pro}}>
-        </section>
-        <label><h2>Description:</h2></label>
-        {{editor system.prodesc target="system.prodesc" button=true owner=owner editable=editable}}
-      </article>
-      <article class="cons-flex">
-        <section>
-          <label for=`{{item.id}}-con-cost`><h2>Total Con Cost:</h2></label>
-          <input id=`{{item.id}}-con-cost` type="number" name="system.con" data-dtype="number" value={{system.con}}>
-        </section>
-        <label><h2>Description:</h2></label>
-        {{editor system.condesc target="system.condesc" button=true owner=owner editable=editable}}
-      </article>
-    </section>
+    {{!-- Subdividing for Pros/Cons section --}}      
+    <h2>Power Pros</h2>
+    <div class="flexrow">
+      <label>Total Pros:</label><input name="system.pros" type="number" value="{{system.pros}}" data-dtype="Number" placeholder="0"/>
     </div>
-  </section>
-
-</form>
+    <h3>Pros Description</h3>
+      {{editor system.prodesc target="system.prodesc" button=true owner=owner editable=editable}}
+      <p>/pros</p>
+    <h2>Power Cons</h2>
+    <div class="flexrow">
+      <label>Total Cons:</label><input name="system.cons" type="number" value="{{system.cons}}" data-dtype="Number" placeholder="0"/>
+    </div>
+    <h3>Cons Description</h3>
+      {{editor system.condesc target="system.condesc" button=true owner=owner editable=editable}}
+      <p>/cons</p>
+    </section>
+    
+  </article>
+      </form>

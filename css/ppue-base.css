@@ -10,7 +10,7 @@
   margin: 0 2%;
 }
 
-section.procons {
+article.pros-cons {
   display: flex;
   flex-direction: row;
   flex-grow: 1;
@@ -18,13 +18,20 @@ section.procons {
   border-top: 2px solid black;
 }
 
-article.pros-flex {
+section.pros-flex {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex-grow: 1;
 }
 
-article.cons-flex {
+section.cons-flex {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  border-left: 2px solid;
+  padding-left: 8px;
+}
+section.power-desc {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
