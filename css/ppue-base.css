@@ -1,0 +1,43 @@
+.ppue.sheet.item .header-fields{
+    display:flex;
+    flex-direction: column;
+}
+
+.ppue.sheet.item .source-info{
+  display:flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin: 0 2%;
+}
+
+section.procons {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  gap: 0.5rem;
+  border-top: 2px solid black;
+}
+
+article.pros-flex {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+article.cons-flex {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  border-left: 2px solid;
+  padding-left: 8px;
+}
+
+book-power {
+  display:flex;
+  flex-grow: 5;
+}
+
+book-page {
+  display:flex;
+  flex-grow: 1;
+}

@@ -1,0 +1,35 @@
+{
+  "name": "ppue",
+  "id": "ppue",
+  "title": "Unofficial Prowlers & Paragons UE",
+  "description": "The unofficial Prowlers & Paragons Ultimate Edition system for FoundryVTT!",
+  "version": "1.2.3",
+  "minimumCoreVersion": "10",
+  "compatibleCoreVersion": "10",
+  "compatibility": {
+    "minimum": 10,
+    "verified": "10.272"
+  },
+  "authors": [{
+    "name": "Asacolips"
+  }],
+  "esmodules": ["module/ppue.mjs"],
+  "styles": ["css/ppue-base.css"],
+  "scripts": [],
+  "packs": [],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    }
+  ],
+  "gridDistance": 5,
+  "gridUnits": "ft",
+  "primaryTokenAttribute": "health",
+  "secondaryTokenAttribute": "power",
+  "url": "",
+  "manifest": "",
+  "download": "",
+  "license": "LICENSE.txt"
+}

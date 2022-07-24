@@ -1,0 +1,151 @@
+{
+  "Actor": {
+    "types": ["character", "npc"],
+    "templates": {
+      "base": {
+        "health": {
+          "value": 0,
+          "max": 0
+        },
+        "resolve": {
+          "value": 0,
+          "min": 0
+        },
+        "edge": {
+          "value": 0
+        },
+        "biography": ""
+      }
+    },
+    "character": {
+      "templates": ["base"],
+      "attributes": {
+        "level": {
+          "value": 1
+        }
+      },
+      "abilities": {
+        "mig": {
+          "value": 1
+        },
+        "agi": {
+          "value": 1
+        },
+        "int": {
+          "value": 1
+        },
+        "tou": {
+          "value": 1
+        },
+        "per": {
+          "value": 1
+        },
+        "wil": {
+          "value": 1
+        }
+      },
+      "talents": {
+        "aca": {
+          "value": 1
+        },
+        "cha": {
+          "value": 1
+        },
+        "com": {
+          "value": 1
+        },
+        "cov": {
+          "value": 1
+        },
+        "inv": {
+          "value": 1
+        },
+        "med": {
+          "value": 1
+        },
+        "pro": {
+          "value": 1
+        },
+        "sci": {
+          "value": 1
+        },
+        "str": {
+          "value": 1
+        },
+        "sur": {
+          "value": 1
+        },
+        "tec": {
+          "value": 1
+        },
+        "veh": {
+          "value": 1
+        }
+      }
+    },
+    "npc": {
+      "templates": ["base"],
+      "cr": 0
+    }
+  },
+  "Item": {
+    "types": ["power", "perk", "armor", "weapon", "equipment", "gadget", "vehicle", "headquarters"],
+    "templates": {
+      "base": {
+        "description": "",
+        "prodesc": "",
+        "condesc": ""
+      },
+      "gear": {
+        "rankmax": 0,
+        "ignoremax": false
+      },
+      "cost": {
+        "rank": 0,
+        "isPerRank": false,
+        "rankmod": 1,
+        "cost": 0,
+        "pros": 0,
+        "cons": 0
+      }
+    },
+    "power": {
+      "templates": ["base", "cost"],
+      "nickname": "",
+      "page": "",
+      "source": "",
+      "range": ""
+    },
+    "perk": {
+      "templates": ["base", "cost"],
+      "source": ""
+    },
+    "armor": {
+      "templates": ["base", "cost", "gear"],
+      "bulky": false,
+      "rigid": false,
+      "shield": false
+    },
+    "weapon": {
+      "templates": ["base", "gear"],
+      "damage": 0,
+      "range": 0
+    },
+    "equipment": {
+      "templates": ["base", "cost", "gear"]
+    },
+    "gadget": {
+      "templates": ["base", "cost", "gear"]
+    },
+    "vehicle": {
+      "templates": ["base", "cost", "gear"],
+   "body": 0,
+   "speed": 0,
+   "control": 0,
+   "passengers": 2
+    },
+    "headquarters": {
+      "templates": ["base", "cost", "gear"]
+    }
+  }
+}

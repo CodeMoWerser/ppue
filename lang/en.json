@@ -1,0 +1,48 @@
+{
+  "PPUE.AbilityMig": "Might",
+  "PPUE.AbilityTou": "Toughness",
+  "PPUE.AbilityAgi": "Agility",
+  "PPUE.AbilityInt": "Intellect",
+  "PPUE.AbilityPer": "Perception",
+  "PPUE.AbilityWil": "Willpower",
+
+  "PPUE.AbilityMigAbbr": "mig",
+  "PPUE.AbilityTouAbbr": "tou",
+  "PPUE.AbilityAgiAbbr": "agi",
+  "PPUE.AbilityIntAbbr": "int",
+  "PPUE.AbilityPerAbbr": "per",
+  "PPUE.AbilityWilAbbr": "wil",
+
+  "PPUE.TalentAca": "Academics",
+  "PPUE.TalentCha": "Charm",
+  "PPUE.TalentCom": "Command",
+  "PPUE.TalentCov": "Covert",
+  "PPUE.TalentInv": "Investigate",
+  "PPUE.TalentMed": "Medicine",
+  "PPUE.TalentPro": "Profession",
+  "PPUE.TalentSci": "Science",
+  "PPUE.TalentStr": "Streetwise",
+  "PPUE.TalentSur": "Survival",
+  "PPUE.TalentTec": "Technology",
+  "PPUE.TalentVeh": "Vehicles",
+
+  "PPUE.TalentAcaAbbr": "aca",
+  "PPUE.TalentChaAbbr": "cha",
+  "PPUE.TalentComAbbr": "com",
+  "PPUE.TalentCovAbbr": "cov",
+  "PPUE.TalentInvAbbr": "inv",
+  "PPUE.TalentMedAbbr": "med",
+  "PPUE.TalentProAbbr": "pro",
+  "PPUE.TalentSciAbbr": "sci",
+  "PPUE.TalentStrAbbr": "str",
+  "PPUE.TalentSurAbbr": "sur",
+  "PPUE.TalentTecAbbr": "tec",
+  "PPUE.TalentVehAbbr": "veh",
+
+  "PPUE.EffectCreate": "Create Effect",
+  "PPUE.EffectToggle": "Toggle Effect",
+  "PPUE.EffectEdit": "Edit Effect",
+  "PPUE.EffectDelete": "Delete Effect",
+
+  "PPUE.Add": "Add"
+}

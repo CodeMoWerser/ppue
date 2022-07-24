@@ -1,0 +1,62 @@
+<form class="{{cssClass}}" autocomplete="off">
+  {{log "data structure"}} {{log this}}
+  <header class="sheet-header">
+    <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}"/>
+    <div class="header-fields">
+      <h1 class="charname"><input name="name" type="text" value="{{item.name}}" placeholder="{{item.name}}"/></h1>
+      <div class="source-info">
+        <div class="book-name"><label>Ability Name:</label><input name="system.nickname" type="text" value="{{system.nickname}}" placeholder="Original Power Name"/></div>
+        <div class="book-page"><label>Page:</label><input name="system.page" type="text" value="{{system.page}}" placeholder="Page #"/></div>
+      </div>
+    </div>
+  </header>
+
+  {{!-- Sheet Tab Navigation --}}
+  <nav class="sheet-tabs tabs" data-group="primary">
+    <a class="item" data-tab="description">Description</a>
+    <a class="item" data-tab="details">Details</a>
+  </nav>
+
+  {{!-- Sheet Body --}}
+  <section class="sheet-body">
+
+    {{!-- Description Tab --}}
+    <div class="tab" data-group="primary" data-tab="description">
+      {{editor system.description target="system.description" rollData=rollData button=true owner=owner editable=editable}}
+    </div>
+    {{!-- Details Tab --}}
+    <div class="tab" data-group="primary" data-tab="details">
+      <section>
+      <div class="flexrow">
+        <label>Base Cost: </label><input name="system.cost" type="number" value="{{system.cost}}" data-dtype="Number"/>
+      </div> 
+      <div class="flexrow">
+        <label>Adjusted Cost: </label> <p><i>{{system.totalcost}} ( ( {{system.cost}} * {{system.rankmod}} ) + {{system.pro}} - {{system.con}} )</i></p>
+      </div>
+      <div class="flexrow">
+        <label>Cost Per Rank: </label> <p><i>{{system.totalcost}} ( {{system.cost}} + {{system.pro}} - {{system.con}} )</i></p>
+      </div>
+    </section>
+    <section class="procons">
+      {{!-- Subdividing for Pros/Cons section --}}      
+      <article class="pros-flex">
+        <section>
+          <label for=`{{item.id}}-pro-cost`><h2>Total Pro Cost:</h2></label>
+          <input id=`{{item.id}}-pro-cost` type="number" name="system.pro" data-dtype="number" value={{system.pro}}>
+        </section>
+        <label><h2>Description:</h2></label>
+        {{editor system.prodesc target="system.prodesc" button=true owner=owner editable=editable}}
+      </article>
+      <article class="cons-flex">
+        <section>
+          <label for=`{{item.id}}-con-cost`><h2>Total Con Cost:</h2></label>
+          <input id=`{{item.id}}-con-cost` type="number" name="system.con" data-dtype="number" value={{system.con}}>
+        </section>
+        <label><h2>Description:</h2></label>
+        {{editor system.condesc target="system.condesc" button=true owner=owner editable=editable}}
+      </article>
+    </section>
+    </div>
+  </section>
+
+</form>
