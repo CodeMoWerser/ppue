@@ -40,20 +40,21 @@
       <div class="flexrow">
         <label>Adjusted Cost: </label> <p><i>{{system.totalcost}} ( ( {{system.cost}} * {{system.rankmod}} ) + {{system.pro}} - {{system.con}} )</i></p>
       </div>
+
     {{!-- Subdividing for Pros/Cons section --}}      
     <h2>Power Pros</h2>
     <div class="flexrow">
       <label>Total Pros:</label><input name="system.pros" type="number" value="{{system.pros}}" data-dtype="Number" placeholder="0"/>
     </div>
     <h3>Pros Description</h3>
-      {{editor system.prodesc target="system.prodesc" button=true owner=owner editable=editable}}
+      {{editor content=system.prodesc target="system.prodesc" button=true owner=owner editable=editable}}
       <p>/pros</p>
     <h2>Power Cons</h2>
     <div class="flexrow">
       <label>Total Cons:</label><input name="system.cons" type="number" value="{{system.cons}}" data-dtype="Number" placeholder="0"/>
     </div>
     <h3>Cons Description</h3>
-      {{editor system.condesc target="system.condesc" button=true owner=owner editable=editable}}
+      {{editor content=system.condesc target="system.condesc" button=true owner=owner editable=editable}}
       <p>/cons</p>
     </section>
     
